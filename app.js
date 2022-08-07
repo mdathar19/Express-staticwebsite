@@ -3,7 +3,7 @@ const app = express()
 const path =  require('path')
 
 
-// syntax:  app.get(route , callback) it takes a route and a callback.
+
 // app.use(express.static())
 // now we are implementing a complete html and css file to the port from exfressJS. 
 // so we have to use built-in middleware(means inbetween of req and res) function of express.
@@ -20,7 +20,7 @@ const path =  require('path')
 // console.log(__dirname);
 const staticPath = path.join(__dirname,"/public")
 app.use(express.static(staticPath))
-
+// syntax:  app.get(route , callback) it takes a route and a callback.
 
 app.get("/",(req,res)=>{     // here "/" means HOME page, in node we have to use http.createServer,here inbuilt routes 
     res.send("Hello world")                             
